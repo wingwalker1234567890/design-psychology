@@ -50,6 +50,55 @@
         h1, h2, h3 {
             color: #fff;
         }
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .hero-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            border-radius: 0 0 10px 10px;
+        }
+        .section-image {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .image-card {
+            position: relative;
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .image-card:hover img {
+            transform: scale(1.1);
+        }
         button {
             margin-top: 15px;
             padding: 12px 20px;
@@ -114,6 +163,12 @@
                 padding: 15px;
                 margin: 10px;
             }
+            .hero-image {
+                height: 300px;
+            }
+            .section-image {
+                height: 200px;
+            }
         }
     </style>
 </head>
@@ -131,14 +186,28 @@
     </nav>
 
     <section id="home">
-        <h1>设计心理学系列</h1>
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>设计心理学系列</h1>
+                <p>探索设计背后的心理学原理</p>
+            </div>
+        </div>
         <p>欢迎来到设计心理学系列网页，这里汇集了唐纳德·A·诺曼的设计心理学书籍的核心内容，帮助您理解如何通过心理学原理改进设计。</p>
     </section>
 
     <section id="design1">
         <h2>日常的设计 - 以人为本的设计原则</h2>
+        <div class="section-image" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
         <p>本书探讨了日常用品的设计如何影响用户的使用体验。诺曼提出了"以人为本的设计"理念，强调设计应考虑到用户的心理和行为模式。</p>
         <h3>示能（Affordance）</h3>
+        <div class="image-grid">
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="门把手示能示例">
+            </div>
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="平板门示能示例">
+            </div>
+        </div>
         <p>示能是指物体本身提供的操作可能性。例如，门把手的设计暗示了"拉"或"推"的操作。</p>
         <h3>小测验</h3>
         <div id="quiz1">
@@ -151,6 +220,7 @@
 
     <section id="design2">
         <h2>如何管理复杂 - 简化用户体验</h2>
+        <div class="section-image" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
         <p>本书探讨了如何管理复杂系统中的设计问题。诺曼认为，复杂是不可避免的，但设计师可以通过合理的设计来简化用户的体验。</p>
         <h3>分层设计</h3>
         <p>通过分层结构，设计师可以将复杂系统分解为更易理解的模块。</p>
@@ -158,6 +228,7 @@
 
     <section id="design3">
         <h2>情感化设计 - 设计中的情感层次</h2>
+        <div class="section-image" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
         <p>本书探讨了情感在设计中的重要性。诺曼提出了情感化设计的三个层次：本能层、行为层和反思层。</p>
         <h3>情感测试</h3>
         <div id="emotion-test">
@@ -170,16 +241,19 @@
 
     <section id="design4">
         <h2>未来设计 - 技术与设计的融合</h2>
+        <div class="section-image" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
         <p>本书探讨了未来设计的发展趋势和挑战。诺曼讨论了新兴技术如何影响设计，并提出了设计师在未来面临的挑战和机遇。</p>
     </section>
 
     <section id="about">
         <h2>关于唐纳德·A·诺曼</h2>
+        <div class="section-image" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
         <p>唐纳德·A·诺曼是认知科学、人机交互和设计领域的权威。他的著作《设计心理学》系列书籍在全球范围内广受好评。</p>
     </section>
 
     <section id="contact">
         <h2>联系我们</h2>
+        <div class="section-image" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"></div>
         <form id="contact-form">
             <label for="name">姓名：</label>
             <input type="text" id="name" name="name" required>
